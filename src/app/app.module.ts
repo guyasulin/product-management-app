@@ -10,7 +10,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
-
 import {
   MatButtonModule,
   MatDatepickerModule,
@@ -20,7 +19,6 @@ import {
   MatSelectModule,
   MatToolbarModule
 } from '@angular/material';
-
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { DeleteProductComponent } from './popup/delete-product/delete-product.component';

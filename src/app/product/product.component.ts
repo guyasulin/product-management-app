@@ -19,6 +19,9 @@ export class ProductComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+    // if(<any>window.location.href('https:// != -1)')) {
+    //   this.product.thumbnailUrl = this.product.thumbnailUrl.replace('http', 'https')
+    // }
   }
 
   showMoreDetails(product: ProductModel) {
