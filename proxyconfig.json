@@ -2,6 +2,7 @@
     "/api": {
         "target":"https://msbit-exam-products-store.firebaseio.com/deliveryProducts/products.json",
         "secure":false,
-        "changeOrigin":true
+        "changeOrigin":true,
+        "logLevel":"bedug"
     }
 }
