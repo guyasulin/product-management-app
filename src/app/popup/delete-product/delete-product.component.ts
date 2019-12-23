@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { ProductModel } from 'src/app/model/productModel';
-import { ProductsService } from 'src/app/service/products.service';
+import { ProductModel } from '../../model/productModel';
+
 
 @Component({
   selector: 'app-delete-product',
