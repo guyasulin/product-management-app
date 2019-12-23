@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material';
 export class ProductDetailsComponent implements OnInit {
 
   public form: FormGroup;
-  public tiltSettings:string;
+  public tiltSettings: string;
   @Input() product: ProductModel;
   @Output() save = new EventEmitter();
 
@@ -49,6 +49,8 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   onDialogSave(product: ProductModel) {
+    // Because  the file comes from a productComponent in httts format then I changed to http
+    this.product.thumbnailUrl = this.product.thumbnailUrl.replace('https', 'http')
     this.save.emit(product);
     const dialogRef = this.dialog.open(SaveProductDetailsComponent, {
       width: '380px',

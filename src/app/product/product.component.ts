@@ -19,9 +19,10 @@ export class ProductComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    // if(<any>window.location.href('https:// != -1)')) {
-    //   this.product.thumbnailUrl = this.product.thumbnailUrl.replace('http', 'https')
-    // }
+    // Because the file comes in httt format then I changed to https
+    if(('https:// != -1)')) {
+      this.product.thumbnailUrl = this.product.thumbnailUrl.replace('http', 'https')
+    }
   }
 
   showMoreDetails(product: ProductModel) {
