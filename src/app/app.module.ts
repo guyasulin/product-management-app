@@ -10,22 +10,26 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule, MatNativeDateModule, MatIconModule} from '@angular/material';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+
+import {
+  MatButtonModule,
+  MatDatepickerModule,
+  MatFormField, MatFormFieldModule,
+  MatIconModule, MatInputModule,
+  MatNativeDateModule, MatPaginatorModule,
+  MatSelectModule,
+  MatToolbarModule
+} from '@angular/material';
+
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { DeleteProductComponent } from './popup/delete-product/delete-product.component';
 import { AddProductComponent } from './popup/add-product/add-product.component';
 import { ProductsService } from './service/products.service';
 import { SearchPipe } from './pipes/search.pipe';
 import { SortPipe } from './pipes/sort.pipe';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { SaveProductDetailsComponent } from './popup/save-product-details/save-product-details.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AngularTiltModule } from 'angular-tilt';
 
 @NgModule({
@@ -59,6 +63,9 @@ import { AngularTiltModule } from 'angular-tilt';
     MatDatepickerModule,
     MatNativeDateModule,
     AngularTiltModule
+  ],
+  exports: [
+    MatFormField,
   ],
   entryComponents: [
     DeleteProductComponent,
