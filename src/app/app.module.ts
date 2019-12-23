@@ -21,7 +21,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { DeleteProductComponent } from './popup/delete-product/delete-product.component';
 import { AddProductComponent } from './popup/add-product/add-product.component';
 import { ProductsService } from './service/products.service';
-import { MatFileUploadModule } from 'angular-material-fileupload';
 import { SearchPipe } from './pipes/search.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import {NgxPaginationModule} from 'ngx-pagination';
@@ -54,7 +53,6 @@ import { AngularTiltModule } from 'angular-tilt';
     MatInputModule,
     MatSelectModule,
     MatDialogModule,
-    MatFileUploadModule,
     NgxPaginationModule,
     MatButtonModule,
     MatFormFieldModule,

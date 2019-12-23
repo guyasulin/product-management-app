@@ -12,8 +12,8 @@ import { MatDialog } from '@angular/material';
 export class ProductDetailsComponent implements OnInit {
 
   public form: FormGroup;
+  public tiltSettings:string;
   @Input() product: ProductModel;
-  @Input() showDetails: boolean;
   @Output() save = new EventEmitter();
 
   constructor(public dialog: MatDialog, private fb: FormBuilder) { }

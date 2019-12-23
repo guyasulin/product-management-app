@@ -1,5 +1,4 @@
-import { Component, OnInit, Inject, ChangeDetectorRef } from '@angular/core';
-import { ProductsService } from 'src/app/service/products.service';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ProductModel } from 'src/app/model/productModel';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -11,6 +10,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddProductComponent implements OnInit {
 
+  public tiltSettings:string;
+  public thumbnailUrl:string;
   public product = new ProductModel();
   public message: string;
   public form: FormGroup;

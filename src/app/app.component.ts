@@ -15,6 +15,8 @@ export class AppComponent {
   public filterProducts: ProductModel[];
   public productSelected: ProductModel = null;
   public pageIndex:number;
+  public sortType: any;
+  public productName:string
 
   constructor(private productsService: ProductsService,public dialog: MatDialog) { }
 
@@ -26,13 +28,11 @@ export class AppComponent {
     this.productsService.getAll()
       .subscribe((res) => {
         this.products = res.flat();
-        console.log(res);
       })
   }
 
   showMoreDetails(product: ProductModel) {
     this.productSelected = new ProductModel(product);
-    console.log(product);
   }
 
   openDialogAdd() {

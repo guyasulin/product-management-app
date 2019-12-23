@@ -10,7 +10,7 @@ import { ProductsService } from 'src/app/service/products.service';
 })
 export class DeleteProductComponent implements OnInit {
 
-  constructor(private productsService:ProductsService,public dialogRef: MatDialogRef<DeleteProductComponent>,
+  constructor(public dialogRef: MatDialogRef<DeleteProductComponent>,
     @Inject(MAT_DIALOG_DATA) public product: ProductModel) { }
 
   ngOnInit() {

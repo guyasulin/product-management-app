@@ -10,6 +10,8 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ProductComponent implements OnInit {
 
+  public tiltSettings:string;
+  
   @Input() product: ProductModel;
   @Output() details = new EventEmitter();
   @Output() remove = new EventEmitter();
