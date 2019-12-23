@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { ProductModel } from './model/productModel';
 import { ProductsService } from './service/products.service';
 import { MatDialog } from '@angular/material';
 import { AddProductComponent } from './popup/add-product/add-product.component';
+import { ProductModel } from './model/productModel';
 
 @Component({
   selector: 'app-root',

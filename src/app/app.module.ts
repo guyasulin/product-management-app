@@ -55,7 +55,6 @@ import { AngularTiltModule } from 'angular-tilt';
     MatDialogModule,
     NgxPaginationModule,
     MatButtonModule,
-    MatFormFieldModule,
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
