@@ -1,0 +1,9 @@
+<div class="delete-product">
+  <div mat-dialog-content>
+    <p>Are you sure Want to delete {{product.name}} ?</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button   (click)="close()">No Thanks</button>
+    <button mat-raised-button class="btn-delete" (click)="delete()">Delete</button>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="product">
+    <div class="product-item" (click)="showMoreDetails(product)">
+        <div class="image-product">
+            <img class="thumbnailUrl" aTilt [tiltSettings]="tiltSettings" [src]="product.thumbnailUrl">
+        </div>
+        <div class="product-content">
+            <h5>{{ product.name }}</h5>
+            <h6>{{ product.description }}</h6>
+        </div>
+    </div>
+    <div class="btn-delete-product">
+        <button mat-raised-button class="btn-delete" (click)="openDialogDelete(product)">Delete</button>
+    </div>
+</div>

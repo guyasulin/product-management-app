@@ -1,0 +1,32 @@
+.add-product {
+    .mat-dialog-content {
+        .example-container  {
+            .mat-form-field {
+                display: block;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+                cursor: pointer;
+                background-image: url('https://archwaychandler.greatheartsamerica.org/wp-content/uploads/sites/9/2016/11/default-placeholder.png');
+                background-repeat: round;
+            }
+        }
+    } 
+
+    .mat-dialog-actions {
+        .btn-add {
+            background-color: cornflowerblue;
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: auto;
+            }
+        }
+
+        .btn-close {
+            background: #5f9ea085;
+        }
+    } 
+
+}

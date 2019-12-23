@@ -1,0 +1,40 @@
+.product {
+    border: 1px solid;
+    padding:16px;
+    margin-bottom: 8px;
+    display: flex;
+
+    &:hover {
+        background-color:#e6e6e6;
+    }
+
+    .product-item {
+        cursor: pointer;
+        flex: 1;
+
+        .image-product {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+
+            .thumbnailUrl {
+                height: 75px;
+                width: 75px;
+            }
+        }
+
+        .product-content {
+            display: inline-block;
+        }
+    }
+
+    .btn-delete-product {
+        margin: auto;
+
+        .btn-delete {
+            background-color: #ff0000b3;
+        }
+    }
+}
+
+

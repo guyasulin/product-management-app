@@ -1,0 +1,54 @@
+<div class="product-details">
+    <form [formGroup]="form">
+        <img class="product-image" aTilt [tiltSettings]="tiltSettings" [src]="product.thumbnailUrl">
+        <div class="example-container">
+            <div>
+                <div>
+                    <mat-form-field class="product-name" appearance="fill">
+                        <mat-label>Name</mat-label>
+                        <input matInput type="text" name="name" [(ngModel)]="product.name" formControlName="name"
+                            maxlength="50">
+                        <mat-error *ngIf="name.invalid && name.touched">
+                            Name field
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="product-description" appearance="fill">
+                        <mat-label>Description</mat-label>
+                        <input matInput type="text" name="description" [(ngModel)]="product.description"
+                            formControlName="description" maxlength="150">
+                        <mat-error *ngIf="description.invalid">
+                            Description field
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="product-price" appearance="fill">
+                        <mat-label>Price</mat-label>
+                        <input matInput type="number" min="0" name="price" [(ngModel)]="product.price"
+                            formControlName="price">
+                        <span matSuffix>$&nbsp;</span>
+                        <mat-error *ngIf="price.invalid">
+                            Price field
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="product-creationDate" appearance="fill">
+                        <mat-label>Creation date</mat-label>
+                        <input matInput [matDatepicker]="picker" name="creationDate" formControlName="creationDate"
+                            [ngModel]="product.creationDate | date: 'yyyy-MM-dd'">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <mat-error *ngIf="creationDate.invalid">
+                            Date field
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="btn-save-edit">
+            <button type="submit" mat-raised-button class="btn-save" [disabled]="!form.valid"
+                (click)="onDialogSave(product)">Save</button>
+        </div>
+    </form>
+</div>

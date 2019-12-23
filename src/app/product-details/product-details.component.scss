@@ -1,0 +1,51 @@
+.product-details {
+    padding: 20px;
+
+    .example-container  {
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+
+        > div {
+            margin: auto 0;
+
+            .product-name ,.product-description{
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .product-description {
+                ::ng-deep {
+                    .mat-form-field-flex {
+                        .mat-form-field-infix {
+                            height: 75px;
+                        }
+                    }
+                }
+            }
+            .product-price ,.product-creationDate{
+                width: 20%;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .product-image {
+        width: 150px;
+        height: 150px;
+        box-shadow: rgba(51, 51, 51, 0.3) 0px 0px 50px ;
+    }
+
+    .btn-save-edit {
+        text-align: end;
+
+        .btn-save {
+            background-color: #66BB6A;
+        }
+        
+        &:disabled {
+            opacity: 0.5;
+            cursor: auto;
+        }
+    }
+}
