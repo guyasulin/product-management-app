@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <label *ngIf="products.length == 0">No data to display</label>
+    <label *ngIf="products == 0">No data to display</label>
     <div class="products">
         <div class="products-list" >
             <app-product *ngFor="let product of products | filterProducts: productName | sortProducts: sortType | paginate: { itemsPerPage: 5, currentPage: pageIndex }"
