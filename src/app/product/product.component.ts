@@ -20,8 +20,11 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     // Because the file comes in httt format then I changed to https
-    if(('https:// != -1)')) {
+    if('https:// != -1') {
       this.product.thumbnailUrl = this.product.thumbnailUrl.replace('http', 'https')
+    }
+    if ('httpss:// != -1') {
+      this.product.thumbnailUrl = this.product.thumbnailUrl.replace('httpss', 'https')
     }
   }
 
